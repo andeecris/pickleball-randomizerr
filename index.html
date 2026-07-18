@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pickleball Doubles Randomizer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero card">
+        <div>
+          <p class="eyebrow">Pickleball Doubles</p>
+          <h1>Random Matchmaker</h1>
+          <p class="hero-copy">
+            Build your squad, draw a doubles match, track the scoreboard, and keep a running leaderboard.
+          </p>
+        </div>
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle color theme">
+          🌙 Dark mode
+        </button>
+      </header>
+
+      <main class="layout">
+        <section class="card players-card">
+          <div class="section-heading">
+            <h2>Players</h2>
+            <span class="pill">Add as many as you want</span>
+          </div>
+          <form id="playerForm" class="player-form">
+            <input id="playerName" type="text" maxlength="24" placeholder="Add a player name" required />
+            <button type="submit">Add Player</button>
+          </form>
+          <div id="playerList" class="player-list"></div>
+        </section>
+
+        <section class="card match-card">
+          <div class="section-heading">
+            <h2>Match Setup</h2>
+            <span class="pill">4 players, 2 teams</span>
+          </div>
+          <div class="match-actions">
+            <button id="randomizeBtn" class="primary" type="button">Randomize Match</button>
+            <button id="clearMatchBtn" class="secondary" type="button">Clear Match</button>
+          </div>
+          <div id="matchStatus" class="status-pill">Add at least 4 players to begin</div>
+          <div id="matchView" class="match-view"></div>
+        </section>
+
+        <section class="card scoreboard-card">
+          <div class="section-heading">
+            <h2>Scoreboard</h2>
+            <span class="pill">Live scoring</span>
+          </div>
+          <div id="scoreboardView" class="scoreboard-view"></div>
+          <button id="finishMatchBtn" class="danger" type="button">Finish Match</button>
+        </section>
+
+        <section class="card leaderboard-card">
+          <div class="section-heading">
+            <h2>Leaderboard</h2>
+            <span class="pill">Wins first</span>
+          </div>
+          <div id="leaderboardView" class="leaderboard-view"></div>
+        </section>
+
+        <section class="card history-card">
+          <div class="section-heading">
+            <h2>Match History</h2>
+            <span class="pill">Recent results</span>
+          </div>
+          <div id="historyView" class="history-view"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
